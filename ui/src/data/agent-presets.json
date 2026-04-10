@@ -1,0 +1,77 @@
+{
+  "presets": [
+    {
+      "id": "code-architect",
+      "name": "Code Architect",
+      "description": "Designs feature architectures by analyzing existing codebase patterns and conventions",
+      "tools": "Glob, Grep, Read, WebSearch",
+      "model": "sonnet",
+      "color": "#22c55e",
+      "category": "development"
+    },
+    {
+      "id": "code-reviewer",
+      "name": "Code Reviewer",
+      "description": "Reviews code for bugs, security issues, and best practice violations",
+      "tools": "Glob, Grep, Read",
+      "model": "sonnet",
+      "color": "#3b82f6",
+      "category": "development"
+    },
+    {
+      "id": "test-designer",
+      "name": "Test Designer",
+      "description": "Designs comprehensive test strategies and writes test cases",
+      "tools": "Glob, Grep, Read, Bash, Write",
+      "model": "sonnet",
+      "color": "#eab308",
+      "category": "testing"
+    },
+    {
+      "id": "tdd-guide",
+      "name": "TDD Guide",
+      "description": "Guides test-driven development: write tests first, then implementation",
+      "tools": "Glob, Grep, Read, Bash, Write, Edit",
+      "model": "sonnet",
+      "color": "#f97316",
+      "category": "testing"
+    },
+    {
+      "id": "doc-writer",
+      "name": "Doc Writer",
+      "description": "Generates and maintains project documentation, READMEs, and API docs",
+      "tools": "Glob, Grep, Read, Write",
+      "model": "haiku",
+      "color": "#8b5cf6",
+      "category": "documentation"
+    },
+    {
+      "id": "security-reviewer",
+      "name": "Security Reviewer",
+      "description": "Scans for OWASP Top 10 vulnerabilities, secrets, and security anti-patterns",
+      "tools": "Glob, Grep, Read",
+      "model": "sonnet",
+      "color": "#ef4444",
+      "category": "security"
+    },
+    {
+      "id": "pm-agent",
+      "name": "PM Agent",
+      "description": "Breaks down features into tasks, manages priorities, and tracks progress",
+      "tools": "Glob, Grep, Read, WebSearch, TodoWrite",
+      "model": "sonnet",
+      "color": "#a855f7",
+      "category": "workflow"
+    },
+    {
+      "id": "refactor-agent",
+      "name": "Refactor Agent",
+      "description": "Identifies code smells and refactors for clarity and maintainability",
+      "tools": "Glob, Grep, Read, Write, Edit",
+      "model": "sonnet",
+      "color": "#14b8a6",
+      "category": "development"
+    }
+  ],
+  "categories": ["development", "testing", "documentation", "security", "workflow"]
+}

@@ -1,0 +1,70 @@
+{
+  "sections": [
+    {
+      "id": "techStack",
+      "label": "Tech Stack",
+      "description": "Project technologies and versions",
+      "placeholder": "Next.js 14, React 18, TypeScript 5.3, Tailwind CSS 3"
+    },
+    {
+      "id": "conventions",
+      "label": "Conventions",
+      "description": "Code style and architecture rules",
+      "placeholder": "- Server Components by default\n- Immutable data patterns\n- Co-locate tests with source"
+    },
+    {
+      "id": "structure",
+      "label": "Project Structure",
+      "description": "Key directories and their purposes",
+      "placeholder": "src/app/ — App Router pages\nsrc/components/ — Shared components\nsrc/lib/ — Utilities"
+    },
+    {
+      "id": "customRules",
+      "label": "Custom Rules",
+      "description": "Project-specific directives for Claude",
+      "placeholder": "Always use TypeScript strict mode\nPrefer named exports\nNo default exports except pages"
+    }
+  ],
+  "presets": [
+    {
+      "id": "nextjs-fullstack",
+      "name": "Next.js Fullstack",
+      "values": {
+        "techStack": "Next.js 14, React 18, TypeScript 5.3, Tailwind CSS 3",
+        "conventions": "- App Router with Server Components by default\n- Immutable data patterns (spread, not mutation)\n- Co-locate tests with source files\n- Use server actions for mutations",
+        "structure": "src/app/ — App Router pages and layouts\nsrc/components/ — Shared UI components\nsrc/lib/ — Utilities and helpers\nsrc/types/ — TypeScript type definitions",
+        "customRules": "Prefer named exports over default exports (except page.tsx)\nUse Tailwind CSS classes, avoid inline styles\nKeep components under 200 lines"
+      }
+    },
+    {
+      "id": "python-api",
+      "name": "Python API",
+      "values": {
+        "techStack": "Python 3.12, FastAPI, SQLAlchemy 2.0, Pydantic v2, Alembic",
+        "conventions": "- Type hints on all functions\n- Dependency injection via FastAPI Depends\n- Async endpoints for I/O operations\n- Pydantic models for request/response validation",
+        "structure": "app/ — Application root\napp/api/ — Route handlers\napp/models/ — SQLAlchemy models\napp/schemas/ — Pydantic schemas\napp/services/ — Business logic\ntests/ — Test files",
+        "customRules": "Use async/await for all database operations\nKeep route handlers thin, delegate to services\nAlembic for all schema migrations"
+      }
+    },
+    {
+      "id": "react-spa",
+      "name": "React SPA",
+      "values": {
+        "techStack": "React 18, TypeScript, Vite, Tailwind CSS, React Router",
+        "conventions": "- Functional components only\n- Custom hooks for shared logic\n- React Query for server state\n- Zustand for client state",
+        "structure": "src/components/ — UI components\nsrc/hooks/ — Custom hooks\nsrc/pages/ — Route pages\nsrc/api/ — API client functions\nsrc/stores/ — State management",
+        "customRules": "No class components\nPrefer composition over prop drilling\nUse lazy loading for route-level code splitting"
+      }
+    },
+    {
+      "id": "blank",
+      "name": "Blank (Start Fresh)",
+      "values": {
+        "techStack": "",
+        "conventions": "",
+        "structure": "",
+        "customRules": ""
+      }
+    }
+  ]
+}

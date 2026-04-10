@@ -1,0 +1,145 @@
+{
+  "domains": [
+    {
+      "id": "ui",
+      "name": "UI / Design",
+      "icon": "🎨",
+      "tiers": [
+        {
+          "tier": 1,
+          "nodes": [
+            { "id": "shadcn-ui", "name": "Shadcn UI", "description": "Headless UI component library with Radix primitives", "domain": "ui", "tier": 1, "status": "available", "dependencies": [], "unlocks": ["tailwind-design-system", "accessibility-a11y"] },
+            { "id": "design-taste-frontend", "name": "Design Taste", "description": "Aesthetic principles for modern frontend design", "domain": "ui", "tier": 1, "status": "available", "dependencies": [], "unlocks": ["framer-motion"] }
+          ]
+        },
+        {
+          "tier": 2,
+          "nodes": [
+            { "id": "tailwind-design-system", "name": "Tailwind DS", "description": "Build consistent design systems with Tailwind tokens", "domain": "ui", "tier": 2, "status": "available", "dependencies": ["shadcn-ui"], "unlocks": ["css-container-queries"] },
+            { "id": "framer-motion", "name": "Framer Motion", "description": "Production-ready animations and gestures for React", "domain": "ui", "tier": 2, "status": "available", "dependencies": ["design-taste-frontend"], "unlocks": [] },
+            { "id": "accessibility-a11y", "name": "Accessibility", "description": "WCAG compliance, screen readers, keyboard navigation", "domain": "ui", "tier": 2, "status": "available", "dependencies": ["shadcn-ui"], "unlocks": [] }
+          ]
+        },
+        {
+          "tier": 3,
+          "nodes": [
+            { "id": "css-container-queries", "name": "Container Queries", "description": "Advanced responsive layouts with CSS container queries", "domain": "ui", "tier": 3, "status": "available", "dependencies": ["tailwind-design-system"], "unlocks": [] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "name": "Code Review",
+      "icon": "🔍",
+      "tiers": [
+        {
+          "tier": 1,
+          "nodes": [
+            { "id": "frontend-code-review", "name": "Frontend Review", "description": "React/Next.js code quality patterns and anti-patterns", "domain": "review", "tier": 1, "status": "available", "dependencies": [], "unlocks": ["perf-review"] },
+            { "id": "backend-code-review", "name": "Backend Review", "description": "API and server-side code quality review", "domain": "review", "tier": 1, "status": "available", "dependencies": [], "unlocks": ["db-review"] }
+          ]
+        },
+        {
+          "tier": 2,
+          "nodes": [
+            { "id": "perf-review", "name": "Perf Review", "description": "Performance bottleneck detection and optimization", "domain": "review", "tier": 2, "status": "available", "dependencies": ["frontend-code-review"], "unlocks": [] },
+            { "id": "db-review", "name": "DB Review", "description": "Database query optimization and schema review", "domain": "review", "tier": 2, "status": "available", "dependencies": ["backend-code-review"], "unlocks": [] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "verify",
+      "name": "Testing",
+      "icon": "✅",
+      "tiers": [
+        {
+          "tier": 1,
+          "nodes": [
+            { "id": "verification-engine", "name": "Verification", "description": "Core testing strategy and test pyramid fundamentals", "domain": "verify", "tier": 1, "status": "available", "dependencies": [], "unlocks": ["e2e-testing", "unit-testing"] }
+          ]
+        },
+        {
+          "tier": 2,
+          "nodes": [
+            { "id": "e2e-testing", "name": "E2E Testing", "description": "End-to-end testing with Playwright or Cypress", "domain": "verify", "tier": 2, "status": "available", "dependencies": ["verification-engine"], "unlocks": ["visual-regression"] },
+            { "id": "unit-testing", "name": "Unit Testing", "description": "Unit and integration testing with Jest/Vitest", "domain": "verify", "tier": 2, "status": "available", "dependencies": ["verification-engine"], "unlocks": [] }
+          ]
+        },
+        {
+          "tier": 3,
+          "nodes": [
+            { "id": "visual-regression", "name": "Visual Regression", "description": "Pixel-level UI change detection", "domain": "verify", "tier": 3, "status": "available", "dependencies": ["e2e-testing"], "unlocks": [] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "security",
+      "name": "Security",
+      "icon": "🔒",
+      "tiers": [
+        {
+          "tier": 1,
+          "nodes": [
+            { "id": "owasp-top10", "name": "OWASP Top 10", "description": "Guard against the most critical web security risks", "domain": "security", "tier": 1, "status": "available", "dependencies": [], "unlocks": ["auth-patterns", "supply-chain"] }
+          ]
+        },
+        {
+          "tier": 2,
+          "nodes": [
+            { "id": "auth-patterns", "name": "Auth Patterns", "description": "Authentication and authorization best practices (JWT, OAuth)", "domain": "security", "tier": 2, "status": "available", "dependencies": ["owasp-top10"], "unlocks": [] },
+            { "id": "supply-chain", "name": "Supply Chain", "description": "Dependency auditing and supply chain security", "domain": "security", "tier": 2, "status": "available", "dependencies": ["owasp-top10"], "unlocks": [] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "workflow",
+      "name": "Workflow",
+      "icon": "⚙️",
+      "tiers": [
+        {
+          "tier": 1,
+          "nodes": [
+            { "id": "git-workflow", "name": "Git Workflow", "description": "Branch strategy, commit conventions, and PR templates", "domain": "workflow", "tier": 1, "status": "available", "dependencies": [], "unlocks": ["ci-cd"] },
+            { "id": "monorepo", "name": "Monorepo", "description": "Monorepo setup with Turborepo or Nx", "domain": "workflow", "tier": 1, "status": "available", "dependencies": [], "unlocks": [] }
+          ]
+        },
+        {
+          "tier": 2,
+          "nodes": [
+            { "id": "ci-cd", "name": "CI/CD", "description": "GitHub Actions, automated testing, and deployment pipelines", "domain": "workflow", "tier": 2, "status": "available", "dependencies": ["git-workflow"], "unlocks": [] }
+          ]
+        }
+      ]
+    }
+  ],
+  "packs": [
+    {
+      "id": "frontend-pack",
+      "name": "Frontend Pack",
+      "description": "Essential frontend development skills",
+      "skillCount": 4,
+      "skills": ["shadcn-ui", "design-taste-frontend", "tailwind-design-system", "frontend-code-review"],
+      "recommended": false
+    },
+    {
+      "id": "fullstack-pack",
+      "name": "Fullstack Pack",
+      "description": "Full-stack development essentials",
+      "skillCount": 5,
+      "skills": ["frontend-code-review", "backend-code-review", "verification-engine", "owasp-top10", "git-workflow"],
+      "recommended": false
+    },
+    {
+      "id": "qa-pack",
+      "name": "QA Pack",
+      "description": "Testing and quality assurance",
+      "skillCount": 3,
+      "skills": ["verification-engine", "e2e-testing", "unit-testing"],
+      "recommended": false
+    }
+  ]
+}
