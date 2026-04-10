@@ -1,0 +1,11 @@
+{
+  "name": "chargen",
+  "version": "0.1.0",
+  "description": "RPG character builder for Claude Code project initialization — visual skill tree, agents, and CLAUDE.md templates",
+  "author": {
+    "name": "ThingsLikeClaude"
+  },
+  "repository": "https://github.com/ThingsLikeClaude/chargen",
+  "license": "MIT",
+  "keywords": ["init", "project", "skill-tree", "rpg", "character-builder"]
+}

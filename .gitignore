@@ -1,0 +1,8 @@
+node_modules/
+.bkit/
+*.log
+.DS_Store
+Thumbs.db
+
+# UI dev dependencies (dist/ is committed)
+ui/node_modules/

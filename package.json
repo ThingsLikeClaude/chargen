@@ -1,0 +1,11 @@
+{
+  "name": "chargen-plugin",
+  "version": "0.1.0",
+  "private": true,
+  "description": "RPG character builder for Claude Code project initialization",
+  "type": "module",
+  "dependencies": {},
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
